@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.section {
+    background-color: #003049;
+}
+
+.bottom {
+    background-color: #4f5d75;
+}
+
+.gold {
+    color: #fca311
+}
