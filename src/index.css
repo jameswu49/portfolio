@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    box-sizing: border-box;
+}
+
 .section {
     background-color: #003049;
 }
@@ -13,3 +17,8 @@
 .gold {
     color: #fca311
 }
+
+/* body {
+    background-color: #4f5d75;
+
+} */
