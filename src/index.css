@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/arrow-right.css');
 
 * {
     box-sizing: border-box;
@@ -18,7 +19,32 @@
     color: #fca311
 }
 
-/* body {
-    background-color: #4f5d75;
+.child {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
 
-} */
+/* Animations for project */
+
+.parent:hover+.child {
+    opacity: 1;
+}
+
+.project-name {
+    transition: transform 0.5s ease-in-out;
+}
+
+.name:hover .project-name {
+    transform: translateX(2rem);
+}
+
+.name:before {
+    content: '→';
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.name:hover:before {
+    opacity: 1;
+}

@@ -1,10 +1,10 @@
 export default function Footer() {
     return (
-        <footer className="bottom md:h-screen">
-            <div className="h-full text-white pl-10 pt-8 md:flex">
+        <footer className="bottom lg:h-screen lg:flex lg:flex-col">
+            <div className="h-full text-white pl-10 pt-8 md:flex lg:pl-40 lg:items-center">
                 <div className="pb-5 leading-8">
-                    <h1 className="font-bold">Contact Me</h1>
-                    <div>jameswu49@gmail.com</div>
+                    <h1 className="font-bold lg:text-5xl pb-5">Contact Me</h1>
+                    <div className="lg:text-xl">jameswu49@gmail.com</div>
                 </div>
                 <div className="leading-8 pb-8 md:ml-32">
                     <h1>My Projects</h1>
