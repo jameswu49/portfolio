@@ -1,3 +1,5 @@
+import Timeline from "./timeline"
+
 export default function About() {
     return (
         <section className="bg-[#edede9] lg:h-screen lg:flex lg:px-10 lg:items-center lg:text-lg">
@@ -19,7 +21,7 @@ export default function About() {
                 </p>
             </div>
             <div className="lg:w-1/2">
-
+                <Timeline />
             </div>
         </section>
     )

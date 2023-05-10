@@ -36,7 +36,7 @@ export default function MyProjects() {
     const myProjects = projects.map((element, index) => {
         return (
             <>
-                <div key={index} className="flex justify-between border-t-2 cursor-pointer parent name" onMouseEnter={() => handleIndex(index)}
+                <div key={index} className="flex justify-between border-t-2 cursor-pointer name" onMouseEnter={() => handleIndex(index)}
                     onClick={handleClick}>
                     <span className="project-name">{element.name}</span>
                     <span>{element.type}</span>
