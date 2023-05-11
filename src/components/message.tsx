@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
-function ContactForm() {
+type MessageProps = {
+    form: React.RefObject<HTMLDivElement>;
+}
+
+function ContactForm({ form }: MessageProps) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -11,7 +15,7 @@ function ContactForm() {
     }
 
     return (
-        <section className='py-5 md:flex md:flex-col md:justify-center md:px-20 lg:h-screen lg:flex lg:flex-col lg:justify-center lg:px-40'>
+        <section ref={form} className='py-5 md:flex md:flex-col md:justify-center md:px-20 lg:h-screen lg:flex lg:flex-col lg:justify-center lg:px-40'>
             <div className='md:text-center lg:text-center'>
                 <h1 className='pl-10 pb-3 text-lg font-bold md:text-4xl lg:text-6xl'>Connect With Me!</h1>
                 <p className='px-10 pb-5 md:text-lg lg:text-xl lg:pb-10'>Have a question or want to know more? <br></br>Send me a message!</p>

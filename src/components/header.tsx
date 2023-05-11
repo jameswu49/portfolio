@@ -1,8 +1,12 @@
 import NavBar from "./navbar"
 
-export default function Header() {
+type HeaderProps = {
+    header: React.RefObject<HTMLDivElement>;
+}
+
+export default function Header({ header }: HeaderProps) {
     return (
-        <nav className="flex absolute w-full items-center">
+        <nav ref={header} className="flex absolute w-full items-center">
             <Logo />
         </nav>
     )

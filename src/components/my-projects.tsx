@@ -1,6 +1,10 @@
 import { useState } from "react";
 
-export default function MyProjects() {
+type MyprojectProps = {
+    projectProps: React.RefObject<HTMLDivElement>;
+}
+
+export default function MyProjects({ projectProps }: MyprojectProps) {
     const [hover, setHover] = useState(false)
     const [index, setIndex] = useState<number | null>(null)
 
@@ -36,7 +40,7 @@ export default function MyProjects() {
     const myProjects = projects.map((element, index) => {
         return (
             <>
-                <div key={index} className="flex justify-between border-t-2 cursor-pointer name" onMouseEnter={() => handleIndex(index)}
+                <div key={index} className="flex justify-between border-t-2 border-slate-300 cursor-pointer name" onMouseEnter={() => handleIndex(index)}
                     onClick={handleClick}>
                     <span className="project-name">{element.name}</span>
                     <span>{element.type}</span>
@@ -46,8 +50,8 @@ export default function MyProjects() {
     });
 
     return (
-        <section className="lg:flex lg:h-screen lg:items-center lg:px-3">
-            <div className="leading-10 border py-3 my-10 mx-5 lg:h-fit lg:w-1/2 parent">
+        <section ref={projectProps} className="bg-[#edede9] lg:flex lg:h-screen lg:items-center lg:px-3">
+            <div className="leading-10 border border-slate-300 py-3 my-10 mx-5 lg:h-fit lg:w-1/2 parent">
                 <h1 className="pl-10 font-bold text-lg">My Projects</h1>
                 <div className="w-full px-10">
                     {myProjects}

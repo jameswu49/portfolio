@@ -1,8 +1,12 @@
 import Timeline from "./timeline"
 
-export default function About() {
+type AboutProps = {
+    about: React.RefObject<HTMLDivElement>;
+}
+
+export default function About({ about }: AboutProps) {
     return (
-        <section className="bg-[#edede9] lg:h-screen lg:flex lg:px-10 lg:items-center lg:text-lg">
+        <section ref={about} className="lg:h-screen lg:flex lg:px-10 lg:items-center lg:text-lg">
             <div className="lg:w-1/2">
                 <h1 className="underline font-bold text-center lg:text-3xl lg:py-5">Who Am I?</h1>
                 <p className="lg:px-20 lg:leading-10 lg:py-1">
