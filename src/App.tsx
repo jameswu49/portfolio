@@ -5,26 +5,29 @@ import Header from './components/header';
 import SkillSet from './components/skillset';
 import About from './components/about';
 import MyProjects from './components/my-projects';
-import Message from './components/message';
+// import Message from './components/message';
+import { Email } from './components/email';
 import Footer from './components/footer';
 
 function App() {
-  const header = useRef<HTMLDivElement>(null);
+  const first = useRef<HTMLDivElement>(null);
   const about = useRef<HTMLDivElement>(null);
   const projectProps = useRef<HTMLDivElement>(null);
   const form = useRef<HTMLDivElement>(null);
 
+
   return (
-    <section>
-      <Header header={header} />
-      <SideNav header={header} about={about} projectProps={projectProps} form={form} />
-      <Opening />
+    <div className='contain'>
+      {/* <Header /> */}
+      {/* <SideNav first={first} about={about} projectProps={projectProps} form={form} /> */}
+      <Opening first={first} />
       {/* <SkillSet /> */}
       <About about={about} />
       <MyProjects projectProps={projectProps} />
-      <Message form={form} />
+      {/* <Message form={form} /> */}
+      <Email />
       <Footer />
-    </section>
+    </div>
   )
 }
 

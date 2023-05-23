@@ -7,6 +7,7 @@ type MyprojectProps = {
 export default function MyProjects({ projectProps }: MyprojectProps) {
     const [hover, setHover] = useState(false)
     const [index, setIndex] = useState<number | null>(null)
+    const [link, setLink] = useState(false)
 
     type Project = {
         name: string;
@@ -35,6 +36,12 @@ export default function MyProjects({ projectProps }: MyprojectProps) {
         }
     }
 
+    function handleHover() {
+        if (hover) {
+            setLink(!link)
+        }
+    }
+
     const images = index !== null ? <img className="lg:h-full lg:w-full lg:rounded-lg" src={projects[index].image} alt="" /> : ''
 
     const myProjects = projects.map((element, index) => {
@@ -51,13 +58,13 @@ export default function MyProjects({ projectProps }: MyprojectProps) {
 
     return (
         <section ref={projectProps} className="bg-[#edede9] lg:flex lg:h-screen lg:items-center lg:px-3">
-            <div className="leading-10 border border-slate-300 py-3 my-10 mx-5 lg:h-fit lg:w-1/2 parent">
+            <div className="leading-10 border border-slate-300 py-3 my-10 mx-5 lg:h-fit lg:w-1/2">
                 <h1 className="pl-10 font-bold text-lg">My Projects</h1>
-                <div className="w-full px-10">
+                <div className="w-full px-10 relative" onMouseEnter={handleHover} onMouseLeave={handleHoverAway}>
                     {myProjects}
                 </div>
             </div>
-            <div className="lg:w-1/2 lg:h-1/2 child">
+            <div className={`lg:w-1/2 lg:h-1/2 ${hover ? 'show' : ''}`}>
                 {!hover && <div className="hidden lg:flex items-center h-full font-bold text-2xl justify-center">Hover over a link to check out a project!</div>}
                 {hover && images}
             </div>

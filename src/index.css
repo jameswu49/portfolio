@@ -12,6 +12,23 @@ body::-webkit-scrollbar {
 
 html {
     scrollbar-width: none;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+.contain {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+section {
+    scroll-snap-align: start;
+}
+
+.nav {
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    background-color: black;
 }
 
 .section {
@@ -33,7 +50,7 @@ html {
 
 /* Animations for project */
 
-.parent:hover+.child {
+.show {
     opacity: 1;
 }
 
@@ -55,6 +72,23 @@ html {
 .name:hover:before {
     opacity: 1;
 }
+
+.submit:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: #fca311;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 300ms ease-in-out;
+}
+
+.submit:hover::before {
+    transform: scaleX(1);
+}
+
+
 
 /* ================ The Timeline ================ */
 

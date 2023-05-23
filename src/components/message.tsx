@@ -4,7 +4,7 @@ type MessageProps = {
     form: React.RefObject<HTMLDivElement>;
 }
 
-function ContactForm({ form }: MessageProps) {
+export default function Message({ form }: MessageProps) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -66,4 +66,3 @@ function ContactForm({ form }: MessageProps) {
     );
 }
 
-export default ContactForm;

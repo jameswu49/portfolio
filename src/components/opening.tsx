@@ -1,6 +1,23 @@
-export default function Opening() {
+import React, { useEffect } from 'react';
+
+type OpeningProps = {
+    first: React.RefObject<HTMLDivElement>;
+}
+
+export default function Opening({ first }: OpeningProps) {
+
+    function handleScroll() {
+        console.log('scrolled')
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll)
+
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
+
     return (
-        <section className="md:flex lg:h-screen">
+        <section ref={first} className="md:flex lg:h-screen">
             <Title />
             <Picture />
         </section>
