@@ -94,7 +94,7 @@ section {
     position: fixed;
     top: 10px;
     right: 10px;
-    transform: translateX(2000px);
+    /* transform: translateX(2000px); */
 }
 
 .slide-in {

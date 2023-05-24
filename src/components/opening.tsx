@@ -1,20 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 type OpeningProps = {
     first: React.RefObject<HTMLDivElement>;
 }
 
 export default function Opening({ first }: OpeningProps) {
-
-    function handleScroll() {
-        console.log('scrolled')
-    }
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll)
-
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
 
     return (
         <section ref={first} className="md:flex lg:h-screen">
@@ -31,20 +21,11 @@ function Title() {
                 <h1 className="flex text-4xl pt-16 md:pt-0 lg:mr-10 lg:text-6xl 2xl:text-8xl">Web <br></br> Developer.</h1>
                 <p className="mt-5 text-lg text-white lg:mr-10 lg:text-2xl">'There is no greater joy in life <br></br> than the joy of creating something'.</p>
                 <p className="text-red-600">- Abhay Kumar</p>
-                <BlockText />
             </section>
         </>
     )
 }
 
-function BlockText() {
-    return (
-        <div className="flex pt-20 pb-10 text-xs 2xl:text-base">
-            <div className="w-1/2 text-white pr-3 lg:pr-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
-            <div className="w-1/2 text-white px-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
-        </div>
-    )
-}
 
 function Picture() {
     return (

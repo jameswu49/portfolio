@@ -40,9 +40,9 @@ export const Email = () => {
 
     return (
         <section className="py-5 md:flex md:flex-col md:justify-center md:px-20 lg:h-screen lg:flex lg:flex-col lg:justify-center lg:px-96">
-            <div className={`modal w-1/4 text-center ${slideIn}`}>
+            {/* <div className={`modal w-1/4 text-center rounded-lg bg-green-400 ${slideIn}`}>
                 Message Sent!
-            </div>
+            </div> */}
             <div className="md:text-center lg:text-center">
                 <h1 className="pl-10 pb-3 text-lg font-bold md:text-4xl lg:text-6xl">Connect With Me!</h1>
                 <p className="px-10 pb-5 md:text-lg lg:text-xl lg:pb-10">
@@ -89,7 +89,8 @@ export const Email = () => {
                     />
                 </div>
                 <div className={`flex justify-center w-fit mt-5 relative mx-auto ${!isSubmitting ? 'submit' : ''}`}>
-                    {isSubmitting ? "Submitting..." : <input disabled={isSubmitting} className="cursor-pointer border py-1 px-20" type="submit" value="Send" />}
+                    {isSubmitting ? "Submitting..." : <input disabled={isSubmitting} className={`cursor-pointer border py-1 px-20 ${sent ? 'hidden' : ''}`} type="submit" value="Send   &mdash;&mdash;&gt;" />}
+                    {sent ? 'Message Sent! 🥳' : ''}
                 </div>
             </form>
         </section>

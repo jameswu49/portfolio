@@ -13,8 +13,8 @@ export default function Footer() {
             </div>
             <hr className="text-white mx-10" />
             <div className="text-white flex justify-evenly py-8">
-                <div>GitHub</div>
-                <div>LinkedIn</div>
+                <div><a href="https://github.com/jameswu49">GitHub</a></div>
+                <div><a href="https://www.linkedin.com/in/jameswu49/">LinkedIn</a></div>
             </div>
         </section>
     )
