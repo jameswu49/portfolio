@@ -1,25 +1,48 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 
 export const Email = () => {
     const form = useRef();
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [sent, setSent] = useState(false)
 
     const sendEmail = (e) => {
         e.preventDefault();
+        setIsSubmitting(true)
 
         emailjs
             .sendForm('service_u4ai4eb', 'template_llp4i36', form.current, 'WTYG-lZAifFRnGgJ4')
             .then((result) => {
-                console.log(result.text);
-                e.target.reset()
+                setTimeout(() => {
+                    console.log(result.text);
+                    e.target.reset()
+                    setIsSubmitting(false)
+                    setSent(true)
+                }, 3000)
             })
             .catch((error) => {
                 console.log(error.text);
+                setIsSubmitting(false)
             });
     };
 
+    useEffect(() => {
+        if (sent) {
+            const timeout = setTimeout(() => {
+                setSent(false);
+            }, 4000);
+
+            return () => clearTimeout(timeout);
+        }
+    }, [sent]);
+
+    const slideIn = sent ? 'slide-in' : ''
+
     return (
         <section className="py-5 md:flex md:flex-col md:justify-center md:px-20 lg:h-screen lg:flex lg:flex-col lg:justify-center lg:px-96">
+            <div className={`modal w-1/4 text-center ${slideIn}`}>
+                Message Sent!
+            </div>
             <div className="md:text-center lg:text-center">
                 <h1 className="pl-10 pb-3 text-lg font-bold md:text-4xl lg:text-6xl">Connect With Me!</h1>
                 <p className="px-10 pb-5 md:text-lg lg:text-xl lg:pb-10">
@@ -65,8 +88,8 @@ export const Email = () => {
                         required
                     />
                 </div>
-                <div className="flex justify-center w-fit mt-5 relative submit mx-auto">
-                    <input className="cursor-pointer border py-1 px-20" type="submit" value="Send" />
+                <div className={`flex justify-center w-fit mt-5 relative mx-auto ${!isSubmitting ? 'submit' : ''}`}>
+                    {isSubmitting ? "Submitting..." : <input disabled={isSubmitting} className="cursor-pointer border py-1 px-20" type="submit" value="Send" />}
                 </div>
             </form>
         </section>

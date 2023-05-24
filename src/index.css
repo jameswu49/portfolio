@@ -88,6 +88,29 @@ section {
     transform: scaleX(1);
 }
 
+.modal {
+    border: 1px solid black;
+    transition: transform 2s ease-in-out;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    transform: translateX(2000px);
+}
+
+.slide-in {
+    transform: translateX(-20px);
+}
+
+.projects {
+    opacity: 0;
+    transition: opacity 20s ease-in-out;
+}
+
+.show-projects {
+    opacity: 1;
+}
+
+
 
 
 /* ================ The Timeline ================ */
@@ -371,6 +394,10 @@ section {
 
     .direction-l .flag:before {
         right: -31px;
+    }
+
+    .slide-in {
+        transform: translateX((50px));
     }
 
 

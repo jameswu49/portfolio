@@ -36,13 +36,7 @@ export default function MyProjects({ projectProps }: MyprojectProps) {
         }
     }
 
-    function handleHover() {
-        if (hover) {
-            setLink(!link)
-        }
-    }
-
-    const images = index !== null ? <img className="lg:h-full lg:w-full lg:rounded-lg" src={projects[index].image} alt="" /> : ''
+    const images = index !== null ? <img className={`lg:h-full lg:w-full lg:rounded-lg projects ${hover ? 'show-projects' : ''}`} src={projects[index].image} alt="" /> : ''
 
     const myProjects = projects.map((element, index) => {
         return (
@@ -60,7 +54,7 @@ export default function MyProjects({ projectProps }: MyprojectProps) {
         <section ref={projectProps} className="bg-[#edede9] lg:flex lg:h-screen lg:items-center lg:px-3">
             <div className="leading-10 border border-slate-300 py-3 my-10 mx-5 lg:h-fit lg:w-1/2">
                 <h1 className="pl-10 font-bold text-lg">My Projects</h1>
-                <div className="w-full px-10 relative" onMouseEnter={handleHover} onMouseLeave={handleHoverAway}>
+                <div className="w-full px-10 relative" onMouseLeave={handleHoverAway}>
                     {myProjects}
                 </div>
             </div>
