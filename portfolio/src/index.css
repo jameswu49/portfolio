@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+.contain {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.test {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+.nav {
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  background-color: black;
+}
+
+.section {
+  background-color: #003049;
+}
+
+.bottom {
+  background-color: #4f5d75;
+}
+
+.gold {
+  color: #fca311
+}
+
+.child {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Animations for project */
+
+.show {
+  opacity: 1;
+}
+
+.project-name {
+  transition: transform 0.3s ease-in-out;
+}
+
+.name:hover .project-name {
+  transform: translateX(2rem);
+}
+
+.name:before {
+  content: '→';
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.name:hover:before {
+  opacity: 1;
+}
+
+.submit:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: #fca311;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms ease-in-out;
+}
+
+.submit:hover::before {
+  transform: scaleX(1);
+}
+
+.modal {
+  border: 1px solid black;
+  transition: transform 2s ease-in-out;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.slide-in {
+  transform: translateX(-20px);
+}
+
+.projects {
+  opacity: 0;
+  transition: opacity 20s ease-in-out;
+}
+
+.show-projects {
+  opacity: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  .slide-in {
+    transform: translateX((50px));
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  .contain {
+    scroll-snap-type: none;
+  }
+}
