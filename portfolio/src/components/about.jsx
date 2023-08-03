@@ -4,7 +4,7 @@ export default function About() {
     return (
         <section className="lg:h-screen lg:px-10 lg:text-lg lg:items-center lg:flex">
             <div className="lg:w-1/2">
-                <h1 className="font-bold pl-4 lg:text-4xl lg:pb-5">Hey There!</h1>
+                <h1 className="font-bold pl-4 text-3xl py-5 lg:text-4xl lg:pb-5">Hey There!</h1>
                 <div className="leading-8 px-4">
                     <p className="pb-2">
                         I&apos;m Jimmy, a web developer with a unique background in education.
