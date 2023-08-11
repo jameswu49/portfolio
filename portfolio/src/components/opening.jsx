@@ -12,7 +12,7 @@ export default function Opening() {
 function Title() {
     return (
         <>
-            <div className="gold items-center h-full w-full flex flex-col justify-center section px-5 py-32 md:px-20">
+            <div className="gold md:items-center h-full w-full flex flex-col justify-center section px-5 py-32 md:px-20">
                 <h1 className="flex text-4xl md:pt-0 lg:mr-10 lg:text-6xl 2xl:text-8xl">Web <br></br> Developer.</h1>
                 <p className="mt-5 text-lg text-white lg:mr-10 lg:text-2xl">&apos;There is no greater joy in life <br></br> than the joy of creating something&apos;.</p>
                 <p className="text-red-600">- Abhay Kumar</p>
