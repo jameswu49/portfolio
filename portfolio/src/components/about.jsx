@@ -2,7 +2,7 @@ import Skills from "./skills"
 
 export default function About() {
     return (
-        <section className="lg:px-10 lg:text-lg lg:items-center lg:flex xl:h-screen ">
+        <section className="lg:px-10 lg:text-lg lg:items-center lg:flex xl:h-screen">
             <div className="lg:w-1/2">
                 <h1 className="py-5 pl-4 text-3xl font-bold lg:text-4xl lg:pb-5">Hey There!</h1>
                 <div className="px-4 leading-8">
@@ -35,7 +35,6 @@ export default function About() {
                     </p>
                 </div>
             </div>
-            {/* <hr className="my-2 border-black border-b-1" /> */}
             <div className="lg:w-1/2">
                 <Skills />
             </div>

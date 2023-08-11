@@ -5,7 +5,7 @@ export default function Skills() {
     return (
         <div>
             <div className="w-[20rem] mx-auto">
-                <img src={boy} alt="boy on computer" className="" />
+                <img src={boy} alt="boy on computer" />
             </div>
             {/* <h1 className="font-bold mb-4 bg-[#fca311] w-fit mx-auto rounded-xl p-2 text-black lg:text-3xl">Tech Stack</h1> */}
             <div className="grid grid-cols-3 gap-y-4 place-items-center">
