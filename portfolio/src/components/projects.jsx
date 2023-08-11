@@ -10,7 +10,7 @@ export default function Projects() {
             <div className="project">
                 {projectLinks.map((element, index) => (
                     <div key={index} className="relative w-3/4 mx-auto my-10 mt-3 overflow-hidden group">
-                        <img src={element.image} alt="project image" className="object-fill w-full h-full transition-opacity duration-300 rounded-xl group-hover:opacity-50" />
+                        <img src={element.image} alt="project image" className="object-fill w-full h-full transition-opacity duration-300 rounded-xl group-hover:opacity-50 border border-gray-200" />
                         <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#1c1d25] bg-opacity-70 backdrop-blur-sm">
                             <div className="flex flex-col items-center transition-transform duration-300 ease-in translate-y-full group-hover:-translate-y-0 gap-y-1">
                                 <h1 className="text-xl text-white md:text-4xl">{element.name}</h1>
