@@ -12,6 +12,16 @@ html {
   scroll-behavior: smooth;
 }
 
+.over::-webkit-scrollbar {
+  display: none;
+}
+
+.over {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
 .contain {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
@@ -46,29 +56,6 @@ section {
 
 /* Animations for project */
 
-.show {
-  opacity: 1;
-}
-
-.project-name {
-  transition: transform 0.3s ease-in-out;
-}
-
-.name:hover .project-name {
-  transform: translateX(2rem);
-}
-
-.name:before {
-  content: '→';
-  position: absolute;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.name:hover:before {
-  opacity: 1;
-}
-
 .submit:before {
   content: '';
   position: absolute;
@@ -84,26 +71,10 @@ section {
   transform: scaleX(1);
 }
 
-.modal {
-  border: 1px solid black;
-  transition: transform 2s ease-in-out;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-}
-
 .slide-in {
   transform: translateX(-20px);
 }
 
-.projects {
-  opacity: 0;
-  transition: opacity 20s ease-in-out;
-}
-
-.show-projects {
-  opacity: 1;
-}
 
 @media screen and (min-width: 1024px) {
   .slide-in {

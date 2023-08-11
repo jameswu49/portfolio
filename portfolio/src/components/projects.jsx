@@ -29,7 +29,7 @@ export default function Projects() {
     }
 
     return (
-        <section className="overflow-scroll xl:h-screen">
+        <section className="xl:h-screen overflow-scroll over">
             <h1 className="text-4xl font-bold text-center xl:pt-5">Projects</h1>
             <Projects />
         </section>
