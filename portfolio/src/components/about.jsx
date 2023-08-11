@@ -3,8 +3,8 @@ import Skills from "./skills"
 export default function About() {
     return (
         <section className=" lg:text-lg lg:items-center lg:flex lg:justify-between lg:mx-5 xl:h-screen">
-            <div className="lg:w-3/4 max-w-[1000px] lg:h-full lg:flex lg:flex-col lg:justify-evenly max-h-[1000px] lg:text-xl">
-                <h1 className="py-4 text-3xl font-bold md:py-0 lg:text-4xl">Hey There!</h1>
+            <div className="px-4 lg:px-0 lg:w-3/4 max-w-[1000px] lg:h-full lg:flex lg:flex-col lg:justify-evenly max-h-[1000px] lg:text-xl">
+                <h1 className="py-4 text-3xl font-bold md:py-0 lg:text-5xl">Hey There!</h1>
                 <p className="pb-2 md:pb-0">
                     I&apos;m Jimmy, a web developer with a unique background in education.
                     My journey into the world of web development started with my passion for both technology and teaching.
