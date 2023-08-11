@@ -1,20 +1,21 @@
+import { BsGithub, BsLinkedin } from "react-icons/bs";
+
 export default function Footer() {
     return (
-        <section className="bottom lg:h-screen lg:flex lg:flex-col">
-            <div className="h-full text-white pl-10 pt-8 md:flex lg:pl-40 lg:items-center">
-                <div className="pb-5 leading-8">
-                    <h1 className="font-bold lg:text-5xl pb-5">Contact Me</h1>
-                    <div className="lg:text-xl">jameswu49@gmail.com</div>
+        <section className="bottom lg:flex lg:flex-col">
+            <hr className="border-t-black" />
+            <div className="flex items-center py-8 text-white justify-evenly">
+                <div className="flex flex-col items-center text-4xl">
+                    <a href="https://github.com/jameswu49" target="_blank" rel="noopener noreferrer"><BsGithub /></a>
+                    <p className="mt-2 text-base">Github</p>
                 </div>
-                <div className="leading-8 pb-8 md:ml-32">
-                    <h1>My Projects</h1>
-                    <h1>My Resume</h1>
+                <div className="flex flex-col items-center text-4xl">
+                    <a href="https://www.linkedin.com/in/jameswu49/" target="_blank" rel="noopener noreferrer"><BsLinkedin /></a>
+                    <p className="mt-2 text-base">Linkedin</p>
                 </div>
             </div>
-            <hr className="text-white mx-10" />
-            <div className="text-white flex justify-evenly py-8">
-                <div><a href="https://github.com/jameswu49">GitHub</a></div>
-                <div><a href="https://www.linkedin.com/in/jameswu49/">LinkedIn</a></div>
+            <div className="text-center text-white text-xs">
+                <a href="https://www.freepik.com/free-vector/hacker-operating-laptop-cartoon-icon-illustration-technology-icon-concept-isolated-flat-cartoon-style_11602236.htm#query=cartoon%20man%20asian%20coder&position=2&from_view=search&track=ais">Image by catalyststuff</a> on Freepik
             </div>
         </section>
     )

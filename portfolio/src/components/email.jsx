@@ -11,7 +11,7 @@ export default function Email() {
         setIsSubmitting(true)
 
         emailjs
-            .sendForm('service_u4ai4eb', 'template_llp4i36', form.current, 'WTYG-lZAifFRnGgJ4')
+            .sendForm('service_u4ai4eb', 'template_x92jl3z', form.current, 'WTYG-lZAifFRnGgJ4')
             .then((result) => {
                 setTimeout(() => {
                     console.log(result.text);
@@ -37,12 +37,12 @@ export default function Email() {
     }, [sent]);
 
     return (
-        <section className="py-5 md:flex md:flex-col md:justify-center md:px-20 lg:h-screen lg:flex lg:flex-col lg:justify-center lg:px-96">
+        <section className="py-5 md:flex md:flex-col md:justify-center md:px-20 lg:h-screen lg:flex lg:flex-col lg:justify-center xl:px-96">
             <div className={`modal w-1/4 text-center rounded-lg bg-green-400 transition ease-in translate-x-[50rem] delay-300 ${sent ? 'transition translate-x-[-1rem]' : ''}`}>
                 Message Sent!
             </div>
             <div className="md:text-center lg:text-center">
-                <h1 className="pl-10 pb-3 text-lg font-bold md:text-4xl lg:text-6xl">Connect With Me!</h1>
+                <h1 className="pb-3 pl-10 text-lg font-bold md:text-4xl lg:text-6xl">Connect With Me!</h1>
                 <p className="px-10 pb-5 md:text-lg lg:text-xl lg:pb-10">
                     Have a question or want to know more? <br></br>Send me a message!
                 </p>
