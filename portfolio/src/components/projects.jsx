@@ -7,7 +7,7 @@ export default function Projects() {
 
     function Projects() {
         return (
-            <div className="project">
+            <div>
                 {projectLinks.map((element, index) => (
                     <div key={index} className="relative w-3/4 mx-auto my-10 mt-3 overflow-hidden group">
                         <img src={element.image} alt="project image" className="object-fill w-full h-full transition-opacity duration-300 rounded-xl group-hover:opacity-50 border border-gray-200" />
