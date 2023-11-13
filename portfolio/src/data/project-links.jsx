@@ -1,8 +1,16 @@
 import muze from "../images/muze.png"
-import abide from "../images/abide.png"
 import oliveGarden from "../images/oliveGarden.png"
+import supreme from "../images/sign.png"
 
 const projectLinks = [
+    {
+        name: 'Supreme E-Commerce',
+        image: supreme,
+        type: 'React, Next 13, Tailwind',
+        description: 'An E-commerce site showcasing various products from the Supreme Website.',
+        url: 'https://supreme-commerce.vercel.app/',
+        repo: 'https://github.com/jameswu49/ecommerce',
+    },
     {
         name: 'Garden Delights',
         image: oliveGarden,
@@ -10,14 +18,6 @@ const projectLinks = [
         description: 'A fan page for lovers of Olive Garden',
         url: 'https://olive-garden-fanpage.vercel.app/',
         repo: 'https://github.com/joseph-w-valdez/olive-garden-fanpage',
-    },
-    {
-        name: 'Abide',
-        image: abide,
-        type: 'React, Tailwind, Express, Node.js, PostgreSQL',
-        description: 'A web app for my church to help newcomers learn about their vision, goals, and beliefs.',
-        url: 'https://abide-ministries.herokuapp.com/',
-        repo: 'https://github.com/jameswu49/Abide-Ministries',
     },
     {
         name: 'Muze',
